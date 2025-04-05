@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -37,12 +36,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import swa.pin.whatsappclone.R
-import kotlin.math.sin
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun UserRegistrationScreen(modifier: Modifier = Modifier) {
+fun UserRegistrationScreen() {
     val countryCodeMap=mapOf(
         "India" to "+91",
         "China" to "+86",
@@ -131,7 +130,7 @@ fun UserRegistrationScreen(modifier: Modifier = Modifier) {
             TextField(
                 singleLine = true,
                  readOnly = true,
-                value = countryCode!!,
+                value = countryCode,
                 onValueChange = {},
                 modifier= Modifier.weight(1f),
                 colors = TextFieldDefaults.colors().copy(
